@@ -1,0 +1,110 @@
+Instance: slate01
+
+Service:
+  Port: 1094
+  ExternalIP: 147.231.25.50
+
+SiteConfig:
+  Name: praguelcg2
+
+Monitoring:
+  Collector: http://xcache.atlas-ml.org:80
+  GStreamCollector: collector.atlas-ml.org:9000
+  VPheartbeat: https://vps.cern.ch/liveness
+
+XCacheConfig:
+  # Local directory to be used as a cache
+  CacheDirectories:
+    - path: /mnt/5ef1a919-861e-4bbb-b2fd-dd34a84a2388
+    - path: /mnt/3021ca25-887d-4ef7-9db8-d2638987a7b5
+    - path: /mnt/6a84464b-669d-480f-a300-268479a2cee9
+    - path: /mnt/4905e351-5bcf-4a23-8c82-5764f9baf689
+    - path: /mnt/16d46d5c-1690-4068-b302-9e467df420f4
+    - path: /mnt/7e4bea2b-ecdd-43a7-8e0d-27cfbc6e55f7
+    - path: /mnt/f31d0109-d745-44d4-9b6a-21e19724019f
+    - path: /mnt/58c8b980-429b-4d11-bea9-54d574bd8ec6
+    - path: /mnt/0459e163-9e66-4b0a-ac40-289b03df1e97
+    - path: /mnt/87d19eea-0fc6-4a7a-8d64-73bc5f36f1ae
+    - path: /mnt/e10e57ea-32f2-4567-8f43-351caa93ce81
+    - path: /mnt/ad708205-3b45-49d2-bdb7-ee94d6b5c62b
+    - path: /mnt/95a2c0de-9fec-4ba6-91d3-685ade682aa1
+    - path: /mnt/fe977098-7a2d-45f3-90b1-138e117eea08
+    - path: /mnt/2e7d7caa-843f-4e56-a2c9-805086a89452
+    - path: /mnt/c0edc5cc-5ec0-47cc-b2f2-da87498dcc17
+    - path: /mnt/876cde53-73f0-45d9-bedf-37f174274f0b
+    - path: /mnt/3badcb38-fd19-43f7-8b3d-215279fdc5a2
+    - path: /mnt/68f237c5-c7b9-4a18-8987-00b7ceaa3bcc
+    - path: /mnt/23d5f706-93e8-4dba-8062-e22ec0f2dde1
+    - path: /mnt/f760a12f-accc-4458-9714-7293b758d240
+    - path: /mnt/de47f4c1-c28f-41c2-bbe6-1f2a3d54f66e
+    - path: /mnt/4ce32f9d-ecca-4370-ae67-d555d766d668
+    - path: /mnt/a5279da4-7766-46b2-95ed-09e587b334bf
+    - path: /mnt/9c8a4c0f-b759-4c86-8675-c21626d4c32a
+    - path: /mnt/9727eb60-cf2f-40ed-93b7-c3efd254e87d
+    - path: /mnt/e9cc7890-4166-42cf-80fa-ac9313bb50f0
+    - path: /mnt/59611f62-b9b7-4ab6-8ab8-e563a7407ce6
+    - path: /mnt/6b8430fd-2f61-4fb2-b784-a72738aaaa91
+    - path: /mnt/efb1ce31-fa0c-43cd-a117-436a90c5f518
+    - path: /mnt/4354099d-260e-422f-9e25-890e4ee95e4d
+    - path: /mnt/22bfba4f-b010-4b8f-b597-fc9032fa1cc3
+    - path: /mnt/7c254f0d-1587-4eb8-b3de-1b48dff7843e
+    - path: /mnt/9dbfabcb-c3da-4fff-9739-4ae8b025fd3f
+    - path: /mnt/1ebfd2b8-44cd-4f55-ab3c-9d420dab0d5b
+    - path: /mnt/0a52cc3f-eb1a-4dc1-a56c-6875929312fc
+    - path: /mnt/0eec7cf1-0c22-4e2c-bd21-ce2c83cf623f
+    - path: /mnt/c13905c8-c244-4000-9add-b6f5895ad5b7
+    - path: /mnt/bb74bced-858b-47e4-bcdd-ff3c9f74f069
+    - path: /mnt/dda75008-8f5e-4615-88e1-dd327b6be8d7
+    - path: /mnt/ef35c1e1-e33a-4195-828a-1fc7bdfe03e4
+    - path: /mnt/f0d075ad-698e-4f48-bc3b-2e8ab48f9d23
+    - path: /mnt/b443468f-5656-423a-ab3e-6c90fe0cb4a5
+    - path: /mnt/afa7a1d7-a3f7-47e8-949a-7e7b6bdf2d17
+    - path: /mnt/5bab5172-5d98-4be6-83cc-e930f5b6dd5c
+    - path: /mnt/819adbee-e4e8-4018-8257-a7f855205acf
+    - path: /mnt/7e116230-754c-4684-9368-887df5754eda
+    - path: /mnt/7e5f799d-2fa6-42d3-af46-3cadb712c756
+    - path: /mnt/4c984a50-9091-40a1-8a3f-f15d704d075a
+    - path: /mnt/cd6431a5-f693-4b76-92c7-b7d1fc036902
+    - path: /mnt/1080046d-9bd9-48b8-84a8-f85f235cfe96
+    - path: /mnt/7d65f6eb-5cfd-4f8b-b6cf-a94a2ea78657
+    - path: /mnt/a8f419b6-5493-44b0-8ab2-4ad9aec1eba6
+    - path: /mnt/9bb955d8-dfa0-457b-b8ca-5b74896c5c2f
+    - path: /mnt/cf989969-3901-431f-a173-4629d596b330
+    - path: /mnt/88d5ce5c-c093-446e-98cf-9f21dda89111
+    - path: /mnt/e77d70c1-eb1d-4010-9505-ddffe8b79ff5
+    - path: /mnt/d98a8b00-4d0f-4720-9628-b0d3aa523e34
+    - path: /mnt/5e98ef4d-1ca6-44db-9a67-811ade6f3fb7
+    - path: /mnt/801d0807-04c2-429c-95f7-d268b2f4667e
+    - path: /mnt/b3b8a2ba-5e29-489f-b622-862683e1f8c8
+    - path: /mnt/a83e119f-5633-45ee-9675-d043634df5b3
+    - path: /mnt/c33ff27a-b800-4ca6-9a7c-0cf209da1e85
+    - path: /mnt/bc42518b-365c-42a9-9e57-91a1420cec7f
+    - path: /mnt/c6a07584-534d-48a3-a6ed-5cf9e86e730f
+    - path: /mnt/6eff1bcb-6f5f-4aca-9276-2426eae91356
+    - path: /mnt/e4c8815f-f541-488a-bb65-aa6db88d1391
+    - path: /mnt/3713dfec-044d-411c-b4ec-fbc574b82cdc
+    - path: /mnt/0ab11faa-1000-4a43-aed2-3b39079832f9
+    - path: /mnt/c4e9ce91-b753-4941-afef-0b88f00c6bc4
+    - path: /mnt/8057d3f6-21b3-496a-b00a-6792e3f503e4
+    - path: /mnt/6857218f-1c49-4180-9cdc-4adda44e30d0
+    - path: /mnt/054f1af2-825f-4e4b-91d0-2d8aab0d610e
+    - path: /mnt/d9e7d389-7813-4e92-a04e-b0b86864aaea
+    - path: /mnt/beacbed0-6544-4101-b28d-2d51b9750ad6
+  MetaDirectory: /mnt/metadata
+  # Space usage
+  HighWaterMark: 0.95
+  LowWaterMark: 0.90
+  # The amount of memory XCache is allowed to use (in GB)
+  RamSize: 32g
+  # Minimal chunk size that will be prefetched/cached.
+  BlockSize: 256k
+  # to prefetch even chunks that were not requested
+  Prefetch: 0
+  # The name of the secret that was created for your XCache certificate
+  # This must be created BEFORE deploying XCache
+  CertSecret: xcache-cert-secret
+
+image:
+  repository: ivukotic/atlas-xcache
+  tag: latest
+  pullPolicy: Always

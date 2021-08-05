@@ -1,0 +1,71 @@
+Instance: slate02
+
+Service:
+  Port: 1094
+  ExternalIP: 192.41.230.42
+
+SiteConfig:
+  Name: AGLT2
+
+Monitoring:
+  Collector: http://xcache.atlas-ml.org:80
+  GStreamCollector: collector.atlas-ml.org:9000
+  VPheartbeat: https://vps.cern.ch/liveness
+
+XCacheConfig:
+  # Local directory to be used as a cache
+  CacheDirectories:
+    - path: /mnt/data1
+    - path: /mnt/data2
+    - path: /mnt/data3
+    - path: /mnt/data4
+    - path: /mnt/data5
+    - path: /mnt/data6
+    - path: /mnt/data7
+    - path: /mnt/data8
+    - path: /mnt/data9
+    - path: /mnt/data10
+    - path: /mnt/data11
+    - path: /mnt/data12
+    - path: /mnt/data13
+    - path: /mnt/data14
+    - path: /mnt/data15
+    - path: /mnt/data16
+    - path: /mnt/data17
+    - path: /mnt/data18
+    - path: /mnt/data19
+    - path: /mnt/data20
+    - path: /mnt/data21
+    - path: /mnt/data22
+    - path: /mnt/data23
+    - path: /mnt/data24
+    - path: /mnt/data25
+    - path: /mnt/data26
+    - path: /mnt/data27
+    - path: /mnt/data28
+    - path: /mnt/data29
+    - path: /mnt/data30
+    - path: /mnt/data31
+    - path: /mnt/data32
+    - path: /mnt/data33
+    - path: /mnt/data34
+    - path: /mnt/data35
+  MetaDirectory: /mnt/data0
+  # Space usage
+  HighWaterMark: 0.95
+  LowWaterMark: 0.90
+  # The amount of memory XCache is allowed to use (in GB)
+  RamSize: 60g
+  # Minimal chunk size that will be prefetched/cached.
+  BlockSize: 256k
+  # to prefetch even chunks that were not requested
+  Prefetch: 0
+  # The name of the secret that was created for your XCache certificate
+  # This must be created BEFORE deploying XCache
+  CertSecret: xcache-cert-secret
+
+image:
+  # repository: slateci/xcache
+  repository: ivukotic/atlas-xcache
+  tag: latest
+  pullPolicy: Always
