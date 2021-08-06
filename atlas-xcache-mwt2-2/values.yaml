@@ -20,9 +20,6 @@ XCacheConfig:
     - path: /scratch/4
     - path: /scratch/5
     - path: /scratch/6
-    - path: /scratch/7
-    - path: /scratch/8
-    - path: /scratch/9
   MetaDirectory: /scratch/0
   # Space usage
   HighWaterMark: 0.95
