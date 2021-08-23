@@ -14,7 +14,6 @@ Monitoring:
 XCacheConfig:
   # Local directory to be used as a cache
   CacheDirectories:
-    - path: /scratch/2
     - path: /scratch/3
     - path: /scratch/4
     - path: /scratch/5
@@ -26,6 +25,7 @@ XCacheConfig:
     - path: /scratch/11
     - path: /scratch/12
     - path: /scratch/13
+    - path: /scratch/14
   MetaDirectory: /scratch/1
   # Space usage
   HighWaterMark: 0.95
