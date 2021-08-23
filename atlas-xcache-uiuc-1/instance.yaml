@@ -1,5 +1,4 @@
 cluster: mwt2-uiuc
-group: mwt2
+group: atlas-xcache
 app: xcache
-
-instance: instance_Qnx9915LWXQ
+instance: instance_krcxSa7L2qE
