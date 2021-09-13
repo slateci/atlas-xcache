@@ -48,5 +48,5 @@ XCacheConfig:
 
 image:
   repository: ivukotic/atlas-xcache
-  tag: latest
+  tag: testing
   pullPolicy: Always
