@@ -19,7 +19,7 @@ jobs:
         run: curl -fsSL https://raw.githubusercontent.com/slateci/gitops-automation-script/main/PushUpdates.py -o PushUpdates.py
 
       - name: Install Python dependencies
-        run: pip install -U requests
+        run: pip install -U requests jinja2
 
       - name: Deploy to SLATE
         id: deploy
@@ -37,8 +37,10 @@ jobs:
           fi
 
           git diff --name-status --pretty="format:" "$BEFORE" "$AFTER" > .changed
+          DEBUG="TRUE"
           python3 PushUpdates.py ".changed" "${{ secrets.SLATE_API_TOKEN }}"
           rm .changed
+          rm PushUpdates.py
 
       - name: Commit SLATE Instance ID
         if: ${{ steps.deploy.outputs.push == 'true' }}
@@ -48,3 +50,20 @@ jobs:
           git add .
           git commit -m "append new SLATE instance ID" --allow-empty
           git push
+
+      - name: Pull down mailgun
+        run: curl -fsSL https://raw.githubusercontent.com/slateci/gitops-automation-script/main/mailgun.py -o mailgun.py
+
+      - name: Email Changes
+        if: ${{ steps.deploy.outputs.push == 'true' }}
+        run: |
+          python3 generate_mail_body.py ${{ github.event.after }}
+          python3 mailgun.py
+        env:
+          MAILGUN_SUBJECT: "SLATE GitOps Change Summary"
+          # fill these out appropriately
+          MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}
+          MAILGUN_DOMAIN: slateci.io
+          MAILGUN_FROM: "GitOps Notification <noreply@slateci.io>"
+          # this can be a comma delimited list
+          MAILGUN_SEND_TO: "ivukotic@uchicago.edu"

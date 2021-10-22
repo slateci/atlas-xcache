@@ -1,0 +1,58 @@
+Instance: slate01
+
+Service:
+  Port: 1094
+  ExternalIP: 192.170.240.18
+
+SiteConfig:
+  Name: UC-AF
+
+Monitoring:
+  Collector: http://xcache.atlas-ml.org:80
+  GStreamCollector: collector.atlas-ml.org:9000
+  VPheartbeat: https://vps.cern.ch/liveness
+XCacheConfig:
+  # Local directory to be used as a cache
+  CacheDirectories:
+    - path: /xcache/2
+    - path: /xcache/3
+    - path: /xcache/4
+    - path: /xcache/5
+    - path: /xcache/6
+    - path: /xcache/7
+    - path: /xcache/8
+    - path: /xcache/9
+    - path: /xcache/10
+    - path: /xcache/11
+    - path: /xcache/12
+    - path: /xcache/13
+    - path: /xcache/14
+    - path: /xcache/15
+    - path: /xcache/16
+    - path: /xcache/17
+    - path: /xcache/18
+    - path: /xcache/19
+    - path: /xcache/20
+    - path: /xcache/21
+    - path: /xcache/22
+    - path: /xcache/23
+    - path: /xcache/24
+  MetaDirectory: /xcache/1
+  # Space usage
+  HighWaterMark: 0.95
+  LowWaterMark: 0.90
+
+  # The amount of memory XCache is allowed to use (in GB)
+  RamSize: 60g
+  # Minimal chunk size that will be prefetched/cached.
+  BlockSize: 256k
+  # to prefetch even chunks that were not requested
+  Prefetch: 0
+  # The name of the secret that was created for your XCache certificate
+  # This must be created BEFORE deploying XCache
+  CertSecret: xcache-cert-secret
+
+image:
+  repository: ivukotic/atlas-xcache
+  tag: latest
+  pullPolicy: Always
