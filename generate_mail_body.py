@@ -49,7 +49,7 @@ def create_mail(commit_id: str = None) -> None:
     change_size = 0
     sites_changed = set()
     for f in body["files"]:
-        if (f['filename'].startswith(".") or f['filename'].startswith('templates') or '/' not in f['filename']):
+        if f['filename'].startswith(".") or f['filename'].startswith('templates') or '/' not in f['filename']:
             sys.stdout.write(f"Skipping {f['filename']} since it's not related to a site config\n")
             continue
         site_changes = {}
