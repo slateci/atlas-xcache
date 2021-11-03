@@ -60,7 +60,7 @@ XCacheConfig:
   # to prefetch even chunks that were not requested
   Prefetch: 0
   # The name of the secret that was created for your XCache certificate
-  # This must be created BEFORE deploying XCache
+  # This must be created BEFORE deploying XCache.
   CertSecret: xcache-cert-secret
 
 image:
