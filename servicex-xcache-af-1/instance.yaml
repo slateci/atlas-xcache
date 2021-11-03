@@ -1,3 +1,5 @@
 cluster: uchicago-af
 group: atlas-xcache
 app: xcache
+
+instance: instance_HEGGi_f7XTI
