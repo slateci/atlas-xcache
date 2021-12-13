@@ -65,8 +65,7 @@ XCacheConfig:
   CertSecret: xcache-cert-secret
 
 image:
-  # repository: slateci/xcache
-  # tag: testing
-  repository: ivukotic/atlas-xcache
+  repository: hub.opensciencegrid.org/usatlas/atlas-xcache
+  # repository: ivukotic/atlas-xcache
   tag: latest
   pullPolicy: Always
