@@ -33,12 +33,11 @@ Optionally you can specify and update the version of the SLATE application with 
 
 **New Instances**
 
-To deploy new instances you must include the cluster, group, and app. Version is optional.
+To deploy new instances you must include the cluster, group, and app. 
 
-        cluster: uutah-prod
-        group: slate-dev
-        app: nginx
-        version: 1.2.0
+        cluster: umich-prod
+        group: atlas-xcache
+        app: xcache
 
  **Existing instances**
 
