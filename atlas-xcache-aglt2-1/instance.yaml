@@ -1,1 +1,3 @@
-instance: instance_amVHfv68wY0
+cluster: umich-prod
+group: atlas-xcache
+app: xcache
