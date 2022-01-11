@@ -37,7 +37,7 @@ XCacheConfig:
   LowWaterMark: 0.90
 
   # The amount of memory XCache is allowed to use (in GB)
-  RamSize: 60g
+  RamSize: 96g
   # Minimal chunk size that will be prefetched/cached.
   BlockSize: 256k
   # to prefetch even chunks that were not requested
