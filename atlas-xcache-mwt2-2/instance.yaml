@@ -1,3 +1,5 @@
 cluster: uchicago-prod2
 group: atlas-xcache
 app: xcache
+
+instance: instance_rFPOuvhAW4M
