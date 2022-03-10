@@ -2,7 +2,7 @@ Instance: slate02
 
 Service:
   Port: 1094
-  ExternalIP: 192.170.227.156
+  ExternalIP: 192.170.231.205
 
 SiteConfig:
   Name: MWT2

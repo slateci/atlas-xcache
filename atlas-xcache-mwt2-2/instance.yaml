@@ -1,1 +1,3 @@
-instance: instance_i1U-pwfxpTU
+cluster: uchicago-prod2
+group: atlas-xcache
+app: xcache
