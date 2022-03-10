@@ -12,7 +12,7 @@ Monitoring:
   GStreamCollector: collector.atlas-ml.org:9000
   VPheartbeat: https://vps.cern.ch/liveness
 XCacheConfig:
-  # Local directory to be used as a cache
+  # Local directories to be used as caches
   CacheDirectories:
     - path: /scratch/1
     - path: /scratch/2
