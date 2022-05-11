@@ -17,6 +17,7 @@ XCacheConfig:
   CacheDirectories:
     - path: /mnt/5ef1a919-861e-4bbb-b2fd-dd34a84a2388
     - path: /mnt/3021ca25-887d-4ef7-9db8-d2638987a7b5
+    - path: /mnt/307956a8-467b-4372-a7be-e748132c30aa
     - path: /mnt/6a84464b-669d-480f-a300-268479a2cee9
     - path: /mnt/4905e351-5bcf-4a23-8c82-5764f9baf689
     - path: /mnt/16d46d5c-1690-4068-b302-9e467df420f4
@@ -33,6 +34,7 @@ XCacheConfig:
     - path: /mnt/c0edc5cc-5ec0-47cc-b2f2-da87498dcc17
     - path: /mnt/876cde53-73f0-45d9-bedf-37f174274f0b
     - path: /mnt/3badcb38-fd19-43f7-8b3d-215279fdc5a2
+    - path: /mnt/3d23dc96-ea62-46f6-8c20-98cef078103d
     - path: /mnt/68f237c5-c7b9-4a18-8987-00b7ceaa3bcc
     - path: /mnt/23d5f706-93e8-4dba-8062-e22ec0f2dde1
     - path: /mnt/f760a12f-accc-4458-9714-7293b758d240
@@ -43,13 +45,13 @@ XCacheConfig:
     - path: /mnt/9727eb60-cf2f-40ed-93b7-c3efd254e87d
     - path: /mnt/e9cc7890-4166-42cf-80fa-ac9313bb50f0
     - path: /mnt/59611f62-b9b7-4ab6-8ab8-e563a7407ce6
+    - path: /mnt/59ce36d4-8f8e-4b9b-a616-3834dbc438ed
     - path: /mnt/6b8430fd-2f61-4fb2-b784-a72738aaaa91
     - path: /mnt/efb1ce31-fa0c-43cd-a117-436a90c5f518
     - path: /mnt/4354099d-260e-422f-9e25-890e4ee95e4d
     - path: /mnt/22bfba4f-b010-4b8f-b597-fc9032fa1cc3
     - path: /mnt/7c254f0d-1587-4eb8-b3de-1b48dff7843e
     - path: /mnt/9dbfabcb-c3da-4fff-9739-4ae8b025fd3f
-    - path: /mnt/1ebfd2b8-44cd-4f55-ab3c-9d420dab0d5b
     - path: /mnt/0a52cc3f-eb1a-4dc1-a56c-6875929312fc
     - path: /mnt/0eec7cf1-0c22-4e2c-bd21-ce2c83cf623f
     - path: /mnt/c13905c8-c244-4000-9add-b6f5895ad5b7
@@ -77,10 +79,8 @@ XCacheConfig:
     - path: /mnt/801d0807-04c2-429c-95f7-d268b2f4667e
     - path: /mnt/b3b8a2ba-5e29-489f-b622-862683e1f8c8
     - path: /mnt/a83e119f-5633-45ee-9675-d043634df5b3
-    - path: /mnt/c33ff27a-b800-4ca6-9a7c-0cf209da1e85
     - path: /mnt/bc42518b-365c-42a9-9e57-91a1420cec7f
     - path: /mnt/c6a07584-534d-48a3-a6ed-5cf9e86e730f
-    - path: /mnt/6eff1bcb-6f5f-4aca-9276-2426eae91356
     - path: /mnt/e4c8815f-f541-488a-bb65-aa6db88d1391
     - path: /mnt/3713dfec-044d-411c-b4ec-fbc574b82cdc
     - path: /mnt/0ab11faa-1000-4a43-aed2-3b39079832f9
