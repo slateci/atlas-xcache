@@ -17,7 +17,6 @@ XCacheConfig:
   CacheDirectories:
     - path: /mnt/5ef1a919-861e-4bbb-b2fd-dd34a84a2388
     - path: /mnt/3021ca25-887d-4ef7-9db8-d2638987a7b5
-    - path: /mnt/307956a8-467b-4372-a7be-e748132c30aa
     - path: /mnt/6a84464b-669d-480f-a300-268479a2cee9
     - path: /mnt/4905e351-5bcf-4a23-8c82-5764f9baf689
     - path: /mnt/16d46d5c-1690-4068-b302-9e467df420f4
