@@ -7,7 +7,7 @@ Service:
 SiteConfig:
   Name: NET2
 
-# Forced restart 1.
+# Forced restart 2.
 
 Monitoring:
   Collector: http://xcache.atlas-ml.org:80
