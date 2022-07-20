@@ -7,63 +7,10 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: Pull down automation script
-        run: curl -fsSL https://raw.githubusercontent.com/slateci/gitops-automation-script/main/PushUpdates.py -o PushUpdates.py
-
-      - name: Install Python dependencies
-        run: pip install -U requests jinja2
-
-      - name: Deploy to SLATE
-        id: deploy
-        run: |
-          BEFORE="${{ github.event.before }}"
-          AFTER="${{ github.event.after }}"
-
-          # https://stackoverflow.com/questions/40883798/how-to-get-git-diff-of-the-first-commit
-          if [[ $BEFORE = "0000000000000000000000000000000000000000" ]]; then
-            BEFORE="4b825dc642cb6eb9a060e54bf8d69288fbee4904"
-          fi
-
-          if [[ $AFTER = "0000000000000000000000000000000000000000" ]]; then
-            AFTER="4b825dc642cb6eb9a060e54bf8d69288fbee4904"
-          fi
-
-          git diff --name-status --pretty="format:" "$BEFORE" "$AFTER" > .changed
-          DEBUG="TRUE"
-          python3 PushUpdates.py ".changed" "${{ secrets.SLATE_API_TOKEN }}"
-          rm .changed
-          rm PushUpdates.py
-
-      - name: Commit SLATE Instance ID
-        if: ${{ steps.deploy.outputs.push == 'true' }}
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "append new SLATE instance ID" --allow-empty
-          git push
-
-      - name: Pull down mailgun
-        run: curl -fsSL https://raw.githubusercontent.com/slateci/gitops-automation-script/main/mailgun.py -o mailgun.py
-
-      - name: Email Changes
-        if: ${{ steps.deploy.outputs.push == 'true' }}
-        run: |
-          python3 generate_mail_body.py ${{ github.event.after }}
-          python3 mailgun.py
-        env:
-          MAILGUN_SUBJECT: "SLATE GitOps Change Summary"
-          # fill these out appropriately
-          MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}
-          MAILGUN_DOMAIN: slateci.io
-          MAILGUN_FROM: "GitOps Notification <noreply@slateci.io>"
-          # this can be a comma delimited list
-          MAILGUN_SEND_TO: "ivukotic@uchicago.edu"
+    name: Deploy
+    uses: slateci/github-actions/.github/workflows/slate-deployment.yml@v1
+    with:
+      mailgun_send_to: "lincolnb@uchicago.edu, ssthapa@uchicago.edu, usatlas-federatedops-l@lists.bnl.gov"
+    secrets:
+      mailgun_api_key: "${{ secrets.MAILGUN_API_KEY }}"
+      slate_api_token: "${{ secrets.SLATE_API_TOKEN }}"
