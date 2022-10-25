@@ -1,5 +1,3 @@
 cluster: uchicago-prod
 group: atlas-xcache
 app: xcache
-
-instance: instance_YWch5duXTec
