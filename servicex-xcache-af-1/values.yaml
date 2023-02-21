@@ -54,6 +54,6 @@ XCacheConfig:
 
 image:
   repository: hub.opensciencegrid.org/usatlas/atlas-xcache
-  # repository: ivukotic/atlas-xcache
+  repository: ivukotic/httpxcache
   tag: latest
   pullPolicy: Always
