@@ -47,3 +47,4 @@ image:
   # repository: ivukotic/atlas-xcache
   tag: latest
   pullPolicy: Always
+# FR 1
